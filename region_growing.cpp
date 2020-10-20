@@ -71,8 +71,7 @@ string getFileName(const string& s) {
 }
 
 
-int
-main (int argc, char** av)
+int main (int argc, char** av)
 {
   if (argc < 2)
   {

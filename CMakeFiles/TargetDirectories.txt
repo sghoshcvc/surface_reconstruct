@@ -1,4 +1,4 @@
-/home/suman/surface_reconstruction/CMakeFiles/rebuild_cache.dir
-/home/suman/surface_reconstruction/CMakeFiles/edit_cache.dir
-/home/suman/surface_reconstruction/CMakeFiles/surface_reconstruction.dir
-/home/suman/surface_reconstruction/CMakeFiles/segmentation_DON.dir
+/home/suman/surface_reconstruct/CMakeFiles/rebuild_cache.dir
+/home/suman/surface_reconstruct/CMakeFiles/edit_cache.dir
+/home/suman/surface_reconstruct/CMakeFiles/segmentation_DON.dir
+/home/suman/surface_reconstruct/CMakeFiles/surface_reconstruction.dir

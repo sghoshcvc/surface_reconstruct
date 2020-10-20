@@ -1,4 +1,4 @@
-# Install script for directory: /home/suman/surface_reconstruction
+# Install script for directory: /home/suman/surface_reconstruct
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/suman/surface_reconstruction/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/suman/surface_reconstruct/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

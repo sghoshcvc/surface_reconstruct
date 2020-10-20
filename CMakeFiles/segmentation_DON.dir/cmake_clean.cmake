@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/segmentation_DON.dir/region_DON.cpp.o"
-  "segmentation_DON.pdb"
   "segmentation_DON"
+  "segmentation_DON.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

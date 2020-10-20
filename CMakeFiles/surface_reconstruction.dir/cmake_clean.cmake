@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/surface_reconstruction.dir/grid_projection_surface.cpp.o"
-  "surface_reconstruction.pdb"
   "surface_reconstruction"
+  "surface_reconstruction.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
