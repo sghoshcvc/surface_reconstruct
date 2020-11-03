@@ -65,7 +65,7 @@ Cloud cgal2pcl(const std::vector<PNC> & points)
 int main (int argc, char** argv) 
 {
  
- pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>); 
+pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>); 
 pcl::PCLPointCloud2 cloud_blob;
 pcl::io::loadPCDFile (argv[1], cloud_blob); 
 pcl::fromPCLPointCloud2 (cloud_blob, *cloud);

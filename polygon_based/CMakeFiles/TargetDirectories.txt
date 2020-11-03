@@ -1,3 +1,5 @@
-/home/suman/surface_reconstruct/polygon_based/CMakeFiles/rebuild_cache.dir
 /home/suman/surface_reconstruct/polygon_based/CMakeFiles/edit_cache.dir
+/home/suman/surface_reconstruct/polygon_based/CMakeFiles/rebuild_cache.dir
+/home/suman/surface_reconstruct/polygon_based/CMakeFiles/cgal_check_build_system.dir
+/home/suman/surface_reconstruct/polygon_based/CMakeFiles/ALL_CGAL_TARGETS.dir
 /home/suman/surface_reconstruct/polygon_based/CMakeFiles/surface_reconstruction_polygonal.dir

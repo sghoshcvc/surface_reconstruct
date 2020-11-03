@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o"
   "CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o"
   "surface_reconstruction_polygonal"
   "surface_reconstruction_polygonal.pdb"

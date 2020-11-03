@@ -57,22 +57,9 @@ include CMakeFiles/surface_reconstruction_polygonal.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/surface_reconstruction_polygonal.dir/flags.make
 
-CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o: CMakeFiles/surface_reconstruction_polygonal.dir/flags.make
-CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o: cgal_pcl_interface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o -c /home/suman/surface_reconstruct/polygon_based/cgal_pcl_interface.cpp
-
-CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/suman/surface_reconstruct/polygon_based/cgal_pcl_interface.cpp > CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.i
-
-CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suman/surface_reconstruct/polygon_based/cgal_pcl_interface.cpp -o CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.s
-
 CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o: CMakeFiles/surface_reconstruction_polygonal.dir/flags.make
 CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o: surface_reconstruction_polygonal.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o -c /home/suman/surface_reconstruct/polygon_based/surface_reconstruction_polygonal.cpp
 
 CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.i: cmake_force
@@ -85,13 +72,11 @@ CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal
 
 # Object files for target surface_reconstruction_polygonal
 surface_reconstruction_polygonal_OBJECTS = \
-"CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o" \
 "CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o"
 
 # External object files for target surface_reconstruction_polygonal
 surface_reconstruction_polygonal_EXTERNAL_OBJECTS =
 
-surface_reconstruction_polygonal: CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o
 surface_reconstruction_polygonal: CMakeFiles/surface_reconstruction_polygonal.dir/surface_reconstruction_polygonal.cpp.o
 surface_reconstruction_polygonal: CMakeFiles/surface_reconstruction_polygonal.dir/build.make
 surface_reconstruction_polygonal: /usr/local/lib/libpcl_segmentation.so
@@ -175,8 +160,9 @@ surface_reconstruction_polygonal: /usr/lib/x86_64-linux-gnu/libvtkCommonMath-7.1
 surface_reconstruction_polygonal: /usr/lib/x86_64-linux-gnu/libvtkCommonSystem-7.1.so.7.1p.1
 surface_reconstruction_polygonal: /usr/lib/x86_64-linux-gnu/libvtkCommonCore-7.1.so.7.1p.1
 surface_reconstruction_polygonal: /usr/lib/x86_64-linux-gnu/libvtksys-7.1.so.7.1p.1
+surface_reconstruction_polygonal: /usr/lib/x86_64-linux-gnu/libglpk.so
 surface_reconstruction_polygonal: CMakeFiles/surface_reconstruction_polygonal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable surface_reconstruction_polygonal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable surface_reconstruction_polygonal"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/surface_reconstruction_polygonal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

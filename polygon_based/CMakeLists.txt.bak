@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.1...3.15)
 
-project( cgal_pcl_interface )
+project( polygon_based )
 
 
 # CGAL and its components
@@ -29,8 +29,10 @@ if ( NOT Boost_FOUND )
 endif()
 
 # include for local directory
-find_package( PCL 1.8 REQUIRED )
 
+# include for local package
+find_package( PCL 1.8 REQUIRED )
+# include for local directory
 if( PCL_FOUND )
   # [C/C++]>[General]>[Additional Include Directories]
   include_directories( ${PCL_INCLUDE_DIRS} )
@@ -43,16 +45,14 @@ if( PCL_FOUND )
 
   # [Linker]>[General]>[Additional Library Directories]
   link_directories( ${PCL_LIBRARY_DIRS} )
-# include for local package
+endif()
+
+# Creating entries for all C++ files with "main" routine
+# ##########################################################
 
 
-# Creating entries for target: cgal_pcl_interface
-# ############################
+create_single_source_cgal_program( "cgal_pcl_interface.cpp" )
 
-add_executable( cgal_pcl_interface  cgal_pcl_interface.cpp surface_reconstruction_polygonal.cpp )
+create_single_source_cgal_program( "surface_reconstruction_polygonal.cpp" )
 
-add_to_cached_list( CGAL_EXECUTABLE_TARGETS cgal_pcl_interface )
-
-# Link the executable to CGAL and third-party libraries
-target_link_libraries(cgal_pcl_interface PRIVATE CGAL::CGAL ${PCL_LIBRARIES} )
 

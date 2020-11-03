@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =   -O3 -DNDEBUG   -frounding-math -march=native -msse4.2 -mfpmath=sse
 
-CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_USE_GMPXX=1 -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -Dqh_QHpointer -DvtkRenderingCore_AUTOINIT="2(vtkInteractionStyle,vtkRenderingFreeType)"
+CXX_DEFINES = -DBOOST_ALL_NO_LIB -DCGAL_EIGEN3_ENABLED -DCGAL_USE_GLPK -DCGAL_USE_GMPXX=1 -DDISABLE_LIBUSB_1_0 -DDISABLE_PCAP -DDISABLE_PNG -Dqh_QHpointer -DvtkRenderingCore_AUTOINIT="2(vtkInteractionStyle,vtkRenderingFreeType)"
 
-CXX_INCLUDES = -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 
+CXX_INCLUDES = -isystem /usr/include/vtk-7.1 -isystem /usr/include/freetype2 -isystem /usr/local/include/pcl-1.11 -isystem /usr/include/eigen3 -isystem /usr/local/include/eigen3 
 

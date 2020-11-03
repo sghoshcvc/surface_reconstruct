@@ -63,9 +63,65 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/cgal_check_build_system.dir/clean
+clean: CMakeFiles/ALL_CGAL_TARGETS.dir/clean
 clean: CMakeFiles/surface_reconstruction_polygonal.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cgal_check_build_system.dir
+
+# All Build rule for target.
+CMakeFiles/cgal_check_build_system.dir/all:
+	$(MAKE) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/depend
+	$(MAKE) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num= "Built target cgal_check_build_system"
+.PHONY : CMakeFiles/cgal_check_build_system.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cgal_check_build_system.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/cgal_check_build_system.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 0
+.PHONY : CMakeFiles/cgal_check_build_system.dir/rule
+
+# Convenience name for target.
+cgal_check_build_system: CMakeFiles/cgal_check_build_system.dir/rule
+
+.PHONY : cgal_check_build_system
+
+# clean rule for target.
+CMakeFiles/cgal_check_build_system.dir/clean:
+	$(MAKE) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/clean
+.PHONY : CMakeFiles/cgal_check_build_system.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ALL_CGAL_TARGETS.dir
+
+# All Build rule for target.
+CMakeFiles/ALL_CGAL_TARGETS.dir/all: CMakeFiles/cgal_check_build_system.dir/all
+	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/depend
+	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num= "Built target ALL_CGAL_TARGETS"
+.PHONY : CMakeFiles/ALL_CGAL_TARGETS.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ALL_CGAL_TARGETS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ALL_CGAL_TARGETS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 0
+.PHONY : CMakeFiles/ALL_CGAL_TARGETS.dir/rule
+
+# Convenience name for target.
+ALL_CGAL_TARGETS: CMakeFiles/ALL_CGAL_TARGETS.dir/rule
+
+.PHONY : ALL_CGAL_TARGETS
+
+# clean rule for target.
+CMakeFiles/ALL_CGAL_TARGETS.dir/clean:
+	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/clean
+.PHONY : CMakeFiles/ALL_CGAL_TARGETS.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/surface_reconstruction_polygonal.dir
@@ -74,12 +130,12 @@ clean: CMakeFiles/surface_reconstruction_polygonal.dir/clean
 CMakeFiles/surface_reconstruction_polygonal.dir/all:
 	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/depend
 	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=1,2,3 "Built target surface_reconstruction_polygonal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/suman/surface_reconstruct/polygon_based/CMakeFiles --progress-num=1,2 "Built target surface_reconstruction_polygonal"
 .PHONY : CMakeFiles/surface_reconstruction_polygonal.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/surface_reconstruction_polygonal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/surface_reconstruction_polygonal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/suman/surface_reconstruct/polygon_based/CMakeFiles 0
 .PHONY : CMakeFiles/surface_reconstruction_polygonal.dir/rule

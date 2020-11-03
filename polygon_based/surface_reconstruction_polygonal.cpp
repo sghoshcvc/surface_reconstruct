@@ -5,7 +5,7 @@
 #include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/point_cloud.h>
-
+#include<fstream>
 #include <utility>  // std::tuple
 #include <vector>
 
@@ -23,14 +23,15 @@ typedef CGAL::SCIP_mixed_integer_program_traits<double>                        M
 #include <CGAL/GLPK_mixed_integer_program_traits.h>
 typedef CGAL::GLPK_mixed_integer_program_traits<double>                        MIP_Solver;
 #endif
-//#if defined(CGAL_USE_GLPK) || defined(CGAL_USE_SCIP)
+#if defined(CGAL_USE_GLPK) || defined(CGAL_USE_SCIP)
 #include <CGAL/Timer.h>
 #include <fstream>
 typedef CGAL::Exact_predicates_inexact_constructions_kernel                        Kernel;
 typedef Kernel::Point_3                                                                                                Point;
 typedef Kernel::Vector_3                                                                                        Vector;
 // Point with normal, and plane index
-typedef std::tuple<Point, Vector, int> PNI;
+//typedef std::tuple<Point, Vector, int> PNI;
+typedef boost::tuple<Point, Vector, int>                                                        PNI;
 typedef std::vector<PNI>                                                                                        Point_vector;
 typedef CGAL::Nth_of_tuple_property_map<0, PNI>                                                Point_map;
 typedef CGAL::Nth_of_tuple_property_map<1, PNI>                                                Normal_map;
@@ -65,14 +66,24 @@ pcl::fromPCLPointCloud2 (cloud_blob, *cloud);
   
   std::vector<PNI> points;
   points.reserve(cloud_with_normals->points.size());
-  std::cout << "Extracting points...";
+  //std::cout << "Extracting points..." << std::str(cloud_with_normals->points.size());
+  pcl::console::print_highlight ("Found %lu points\n", cloud_with_normals->points.size ());
+  std::size_t i = 0;
+  std::ofstream myfile;
+  myfile.open ("tile.pwn");
   for (const auto & pt : cloud_with_normals->points) {
     Point p (pt.x, pt.y, pt.z );
     Vector n (pt.normal_x, pt.normal_y, pt.normal_z);
     int c =0;
+    points[i].get<0>() = p;
+    points[i].get<1>() = n;
+    points[i].get<2>() = c;
+    i++;
+    myfile << pt.x << " "<< pt.y << " " << pt.z << " " << pt.normal_x << " "<< pt.normal_y << " " << pt.normal_z << std::endl;
 
-    points.push_back(std::make_tuple(p, n, c));
+    //points.push_back(std::make_tuple(p, n, c));
   }
+  myfile.close();
           CGAL::Timer t;
         t.start();
   std::cout << "starting RANSAC...";
@@ -132,4 +143,11 @@ pcl::fromPCLPointCloud2 (cloud_blob, *cloud);
         }
         return EXIT_SUCCESS;
 }
-//#endif
+#else
+int main(int, char**)
+{
+    std::cerr << "This test requires either GLPK or SCIP.\n";
+    return EXIT_SUCCESS;
+}
+
+#endif 

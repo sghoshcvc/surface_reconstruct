@@ -79,8 +79,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/CGAL/CGALConfigVersion.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_Common.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_CreateSingleSourceCGALProgram.cmake"
+  "/usr/local/lib/cmake/CGAL/CGAL_Eigen_support.cmake"
+  "/usr/local/lib/cmake/CGAL/CGAL_GLPK_support.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_GeneratorSpecificSettings.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_Macros.cmake"
+  "/usr/local/lib/cmake/CGAL/CGAL_SCIP_support.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_SCM.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_SetupBoost.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_SetupCGALDependencies.cmake"
@@ -91,6 +94,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/CGAL/CGAL_enable_end_of_configuration_hook.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_setup_target_dependencies.cmake"
   "/usr/local/lib/cmake/CGAL/CGAL_target_use_TBB.cmake"
+  "/usr/local/lib/cmake/CGAL/FindEigen3.cmake"
+  "/usr/local/lib/cmake/CGAL/FindGLPK.cmake"
   "/usr/local/lib/cmake/CGAL/FindGMP.cmake"
   "/usr/local/lib/cmake/CGAL/FindGMPXX.cmake"
   "/usr/local/lib/cmake/CGAL/FindMPFR.cmake"
@@ -109,6 +114,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeParseArguments.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake"
@@ -117,6 +125,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.16/Modules/FindPkgConfig.cmake"
+  "/usr/share/cmake-3.16/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -138,5 +147,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/cgal_check_build_system.dir/DependInfo.cmake"
+  "CMakeFiles/ALL_CGAL_TARGETS.dir/DependInfo.cmake"
   "CMakeFiles/surface_reconstruction_polygonal.dir/DependInfo.cmake"
   )

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/suman/surface_reconstruct/polygon_based
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cgal_check_build_system
+
+# Build rule for target.
+cgal_check_build_system: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cgal_check_build_system
+.PHONY : cgal_check_build_system
+
+# fast build rule for target.
+cgal_check_build_system/fast:
+	$(MAKE) -f CMakeFiles/cgal_check_build_system.dir/build.make CMakeFiles/cgal_check_build_system.dir/build
+.PHONY : cgal_check_build_system/fast
+
+#=============================================================================
+# Target rules for targets named ALL_CGAL_TARGETS
+
+# Build rule for target.
+ALL_CGAL_TARGETS: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ALL_CGAL_TARGETS
+.PHONY : ALL_CGAL_TARGETS
+
+# fast build rule for target.
+ALL_CGAL_TARGETS/fast:
+	$(MAKE) -f CMakeFiles/ALL_CGAL_TARGETS.dir/build.make CMakeFiles/ALL_CGAL_TARGETS.dir/build
+.PHONY : ALL_CGAL_TARGETS/fast
+
+#=============================================================================
 # Target rules for targets named surface_reconstruction_polygonal
 
 # Build rule for target.
@@ -122,33 +148,6 @@ surface_reconstruction_polygonal: cmake_check_build_system
 surface_reconstruction_polygonal/fast:
 	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/build
 .PHONY : surface_reconstruction_polygonal/fast
-
-cgal_pcl_interface.o: cgal_pcl_interface.cpp.o
-
-.PHONY : cgal_pcl_interface.o
-
-# target to build an object file
-cgal_pcl_interface.cpp.o:
-	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.o
-.PHONY : cgal_pcl_interface.cpp.o
-
-cgal_pcl_interface.i: cgal_pcl_interface.cpp.i
-
-.PHONY : cgal_pcl_interface.i
-
-# target to preprocess a source file
-cgal_pcl_interface.cpp.i:
-	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.i
-.PHONY : cgal_pcl_interface.cpp.i
-
-cgal_pcl_interface.s: cgal_pcl_interface.cpp.s
-
-.PHONY : cgal_pcl_interface.s
-
-# target to generate assembly for a file
-cgal_pcl_interface.cpp.s:
-	$(MAKE) -f CMakeFiles/surface_reconstruction_polygonal.dir/build.make CMakeFiles/surface_reconstruction_polygonal.dir/cgal_pcl_interface.cpp.s
-.PHONY : cgal_pcl_interface.cpp.s
 
 surface_reconstruction_polygonal.o: surface_reconstruction_polygonal.cpp.o
 
@@ -183,12 +182,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... cgal_check_build_system"
+	@echo "... ALL_CGAL_TARGETS"
 	@echo "... surface_reconstruction_polygonal"
-	@echo "... cgal_pcl_interface.o"
-	@echo "... cgal_pcl_interface.i"
-	@echo "... cgal_pcl_interface.s"
 	@echo "... surface_reconstruction_polygonal.o"
 	@echo "... surface_reconstruction_polygonal.i"
 	@echo "... surface_reconstruction_polygonal.s"
